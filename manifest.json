@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Smart Website Locker",
+  "version": "1.0",
+  "description": "Lock websites with password",
+  "permissions": ["storage", "tabs", "activeTab"],
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "action": {
+    "default_popup": "popup/index.html",
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
